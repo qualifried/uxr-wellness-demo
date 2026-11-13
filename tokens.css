@@ -1,0 +1,475 @@
+/* tokens.css
+ * ALL design tokens for the UXR Health & Wellness stakeholder demo.
+ * Nothing visual is approved — every value here is provisional and
+ * pending PM visual review. Change tokens here; do not hardcode colors
+ * or sizes in styles.css or app.js.
+ */
+
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/Outfit-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ---------- Typography ---------- */
+  --font-sans: "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --text-2xs: 0.625rem;
+  --text-xs: 0.6875rem;
+  --text-sm: 0.75rem;
+  --text-md: 0.8125rem;
+  --text-base: 0.875rem;
+  --text-lg: 1rem;
+  --text-xl: 1.125rem;
+  --text-2xl: 1.25rem;
+  --text-3xl: 1.5rem;
+  --text-4xl: 2rem;
+  --text-display: 3.25rem;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --leading-none: 1;
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.45;
+  --leading-relaxed: 1.6;
+  --tracking-tight: -0.03em;
+  --tracking-snug: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.14em;
+
+  /* ---------- Spacing ---------- */
+  --space-0: 0px;
+  --space-px: 1px;
+  --space-0-5: 2px;
+  --space-1: 4px;
+  --space-1-5: 6px;
+  --space-2: 8px;
+  --space-2-5: 10px;
+  --space-3: 12px;
+  --space-3-5: 14px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 40px;
+  --space-10: 48px;
+  --space-11: 56px;
+  --space-12: 64px;
+
+  /* ---------- Radii ---------- */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 22px;
+  --radius-2xl: 28px;
+  --radius-3xl: 36px;
+  --radius-pill: 999px;
+  --radius-phone: 52px;
+  --radius-screen: 42px;
+  --radius-bezel: 48px;
+
+  /* ---------- Motion ---------- */
+  --duration-instant: 80ms;
+  --duration-fast: 180ms;
+  --duration-med: 280ms;
+  --duration-slow: 520ms;
+  --duration-theme: 640ms;
+  --duration-zone: 800ms;
+  --duration-breathe: 4s;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.15, 1);
+  --ease-soft: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-spring: cubic-bezier(0.22, 1.2, 0.36, 1);
+
+  /* ---------- Opacity & interaction ---------- */
+  --opacity-hover: 0.88;
+  --opacity-disabled: 0.4;
+  --opacity-faint: 0.55;
+  --opacity-ghost: 0.14;
+  --opacity-press: 0.94;
+  --opacity-overlay: 0.45;
+  --scale-press: 0.98;
+  --scale-pop: 1.03;
+
+  /* ---------- Component metrics ---------- */
+  --phone-width: 390px;
+  --phone-height: 844px;
+  --phone-bezel: 10px;
+  --stroke-hairline: 1px;
+  --stroke-thin: 1.5px;
+  --stroke-medium: 2px;
+  --stroke-thick: 3px;
+  --status-bar-height: 48px;
+  --home-indicator-height: 22px;
+  --home-indicator-width: 118px;
+  --home-indicator-bar: 5px;
+  --speaker-width: 96px;
+  --speaker-height: 22px;
+  --speaker-offset: 8px;
+  --pill-height: 64px;
+  --pill-inset-x: 16px;
+  --pill-inset-y: 14px;
+  --pill-pad-x: 6px;
+  --pill-pad-y: 6px;
+  --pill-clearance: 102px;
+  --icon-xs: 14px;
+  --icon-sm: 16px;
+  --icon-md: 20px;
+  --icon-lg: 22px;
+  --icon-xl: 28px;
+  --icon-2xl: 36px;
+  --tap-min: 44px;
+  --card-pad: 16px;
+  --screen-pad-x: 20px;
+  --quick-card-min: 100px;
+  --ring-size: 132px;
+  --ring-stroke: 9px;
+  --ring-gap: 4px;
+  --chart-height: 148px;
+  --sparkline-width: 120px;
+  --sparkline-height: 36px;
+  --graphic-height: 148px;
+  --seat-panel-height: 196px;
+  --light-swatch-size: 72px;
+  --breathe-size: 168px;
+  --health-age-number: 3.25rem;
+
+  /* ---------- Presenter stage (outside the phone) ---------- */
+  --stage-bg: #e6e4df;
+  --stage-fg: #1f1f1d;
+  --stage-muted: #6a6964;
+  --stage-panel-bg: #fffcf7;
+  --stage-panel-border: #d9d6ce;
+  --stage-gap: 40px;
+  --stage-pad: 28px;
+  --stage-panel-width: 312px;
+  --stage-panel-radius: 24px;
+  --stage-shadow: 0 16px 40px rgba(31, 31, 29, 0.08);
+  --phone-bezel-color: #1a1a18;
+  --phone-shadow: 0 28px 80px rgba(26, 26, 24, 0.28), 0 2px 8px rgba(26, 26, 24, 0.18);
+  --focus-ring: 2px solid #4a6a62;
+  --focus-offset: 2px;
+}
+
+/* =====================================================================
+ * Light / dark schemes — calm neutrals, one restrained accent (sage).
+ * Mood attributes layer conservative tints on top of these.
+ * ===================================================================== */
+
+[data-scheme="light"] {
+  --bg: #f3f2ee;
+  --bg-gradient-start: #f7f6f2;
+  --bg-gradient-end: #ebe9e3;
+  --surface: #fffcf8;
+  --surface-2: #f6f5f1;
+  --surface-3: #eeece7;
+  --text: #1c1c1a;
+  --text-muted: #6e6d68;
+  --text-faint: #96948c;
+  --text-on-accent: #ffffff;
+  --text-on-dark: #f6f5f1;
+  --border: #e3e1da;
+  --border-strong: #cfcbc3;
+  --accent: #4a6a62;
+  --accent-soft: #e4eeea;
+  --accent-strong: #3a564f;
+  --accent-contrast: #4a6a62;
+  --shadow-card: 0 1px 2px rgba(28, 28, 26, 0.04), 0 10px 28px rgba(28, 28, 26, 0.06);
+  --shadow-soft: 0 6px 18px rgba(28, 28, 26, 0.06);
+  --shadow-pill: 0 12px 32px rgba(28, 28, 26, 0.26);
+  --pill-bg: #1c1c1a;
+  --pill-fg: #a3a29b;
+  --pill-active-fg: #ffffff;
+  --pill-indicator-start: #4a6a62;
+  --pill-indicator-end: #3a564f;
+  --status-fg: #1c1c1a;
+  --overlay: rgba(28, 28, 26, 0.4);
+  --success: #4a6a62;
+  --warning: #8a6d3b;
+  --danger: #8b4a3f;
+  --pending: #8a6d3b;
+  --pending-bg: #f3ece0;
+  --provisional-fg: #6f5a38;
+  --provisional-bg: #f3ece0;
+  --chart-line: #4a6a62;
+  --chart-fill: rgba(74, 106, 98, 0.16);
+  --chart-grid: #e3e1da;
+  --ring-move: #4a6a62;
+  --ring-fuel: #8a6d3b;
+  --ring-mind: #5a6470;
+  --badge-sim-bg: #1c1c1a;
+  --badge-sim-fg: #f6f5f1;
+  --input-bg: #fffcf8;
+  --input-border: #cfcbc3;
+  --divider: #e3e1da;
+  --glow: rgba(74, 106, 98, 0.28);
+}
+
+[data-scheme="dark"] {
+  --bg: #161615;
+  --bg-gradient-start: #1c1c1a;
+  --bg-gradient-end: #121211;
+  --surface: #232321;
+  --surface-2: #2c2c29;
+  --surface-3: #333330;
+  --text: #f3f1ec;
+  --text-muted: #a3a29b;
+  --text-faint: #7a7973;
+  --text-on-accent: #161615;
+  --text-on-dark: #f3f1ec;
+  --border: #333330;
+  --border-strong: #45453f;
+  --accent: #8fa39a;
+  --accent-soft: #2a3532;
+  --accent-strong: #b5c6be;
+  --accent-contrast: #8fa39a;
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 28px rgba(0, 0, 0, 0.28);
+  --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.24);
+  --shadow-pill: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --pill-bg: #0e0e0d;
+  --pill-fg: #7a7973;
+  --pill-active-fg: #f3f1ec;
+  --pill-indicator-start: #8fa39a;
+  --pill-indicator-end: #6d857c;
+  --status-fg: #f3f1ec;
+  --overlay: rgba(0, 0, 0, 0.5);
+  --success: #8fa39a;
+  --warning: #c4a574;
+  --danger: #c4887d;
+  --pending: #c4a574;
+  --pending-bg: #3a3328;
+  --provisional-fg: #d4c0a0;
+  --provisional-bg: #3a3328;
+  --chart-line: #8fa39a;
+  --chart-fill: rgba(143, 163, 154, 0.2);
+  --chart-grid: #333330;
+  --ring-move: #8fa39a;
+  --ring-fuel: #c4a574;
+  --ring-mind: #9aa3ad;
+  --badge-sim-bg: #f3f1ec;
+  --badge-sim-fg: #161615;
+  --input-bg: #2c2c29;
+  --input-border: #45453f;
+  --divider: #333330;
+  --glow: rgba(143, 163, 154, 0.35);
+}
+
+/* =====================================================================
+ * Mood check-in palettes — conservative shifts of accent + wash.
+ * Applied via [data-mood] on <html>, combined with [data-scheme].
+ * ===================================================================== */
+
+[data-scheme="light"][data-mood="steady"] {
+  --accent: #4a6a62;
+  --accent-soft: #e4eeea;
+  --accent-strong: #3a564f;
+  --pill-indicator-start: #4a6a62;
+  --pill-indicator-end: #3a564f;
+  --bg-gradient-start: #f7f6f2;
+  --bg-gradient-end: #ebe9e3;
+  --glow: rgba(74, 106, 98, 0.28);
+}
+
+[data-scheme="light"][data-mood="calm"] {
+  --accent: #4d6574;
+  --accent-soft: #e4ebef;
+  --accent-strong: #3d5260;
+  --pill-indicator-start: #4d6574;
+  --pill-indicator-end: #3d5260;
+  --bg-gradient-start: #f3f5f7;
+  --bg-gradient-end: #e6eaee;
+  --chart-line: #4d6574;
+  --chart-fill: rgba(77, 101, 116, 0.16);
+  --glow: rgba(77, 101, 116, 0.28);
+}
+
+[data-scheme="light"][data-mood="bright"] {
+  --accent: #6a5f4a;
+  --accent-soft: #f0ebe3;
+  --accent-strong: #564b39;
+  --pill-indicator-start: #6a5f4a;
+  --pill-indicator-end: #564b39;
+  --bg-gradient-start: #f8f5ef;
+  --bg-gradient-end: #efe8dc;
+  --chart-line: #6a5f4a;
+  --chart-fill: rgba(106, 95, 74, 0.16);
+  --glow: rgba(106, 95, 74, 0.28);
+}
+
+[data-scheme="light"][data-mood="low"] {
+  --accent: #5c5668;
+  --accent-soft: #eceaf0;
+  --accent-strong: #494456;
+  --pill-indicator-start: #5c5668;
+  --pill-indicator-end: #494456;
+  --bg-gradient-start: #f4f3f6;
+  --bg-gradient-end: #e8e6ec;
+  --chart-line: #5c5668;
+  --chart-fill: rgba(92, 86, 104, 0.16);
+  --glow: rgba(92, 86, 104, 0.28);
+}
+
+[data-scheme="light"][data-mood="restless"] {
+  --accent: #6d534a;
+  --accent-soft: #f0e8e5;
+  --accent-strong: #594039;
+  --pill-indicator-start: #6d534a;
+  --pill-indicator-end: #594039;
+  --bg-gradient-start: #f7f3f1;
+  --bg-gradient-end: #eee6e3;
+  --chart-line: #6d534a;
+  --chart-fill: rgba(109, 83, 74, 0.16);
+  --glow: rgba(109, 83, 74, 0.28);
+}
+
+[data-scheme="dark"][data-mood="steady"] {
+  --accent: #8fa39a;
+  --accent-soft: #2a3532;
+  --accent-strong: #b5c6be;
+  --pill-indicator-start: #8fa39a;
+  --pill-indicator-end: #6d857c;
+  --bg-gradient-start: #1c1c1a;
+  --bg-gradient-end: #121211;
+  --glow: rgba(143, 163, 154, 0.35);
+}
+
+[data-scheme="dark"][data-mood="calm"] {
+  --accent: #8aa0ad;
+  --accent-soft: #263038;
+  --accent-strong: #b4c5ce;
+  --pill-indicator-start: #8aa0ad;
+  --pill-indicator-end: #6c8491;
+  --bg-gradient-start: #191c1e;
+  --bg-gradient-end: #121416;
+  --chart-line: #8aa0ad;
+  --chart-fill: rgba(138, 160, 173, 0.2);
+  --glow: rgba(138, 160, 173, 0.35);
+}
+
+[data-scheme="dark"][data-mood="bright"] {
+  --accent: #c0b093;
+  --accent-soft: #353027;
+  --accent-strong: #d9ccb0;
+  --pill-indicator-start: #c0b093;
+  --pill-indicator-end: #a39274;
+  --bg-gradient-start: #1d1b17;
+  --bg-gradient-end: #141311;
+  --chart-line: #c0b093;
+  --chart-fill: rgba(192, 176, 147, 0.2);
+  --glow: rgba(192, 176, 147, 0.35);
+}
+
+[data-scheme="dark"][data-mood="low"] {
+  --accent: #a39db0;
+  --accent-soft: #2e2c34;
+  --accent-strong: #c4bfcf;
+  --pill-indicator-start: #a39db0;
+  --pill-indicator-end: #847e93;
+  --bg-gradient-start: #1b1a1d;
+  --bg-gradient-end: #131214;
+  --chart-line: #a39db0;
+  --chart-fill: rgba(163, 157, 176, 0.2);
+  --glow: rgba(163, 157, 176, 0.35);
+}
+
+[data-scheme="dark"][data-mood="restless"] {
+  --accent: #c09a8e;
+  --accent-soft: #352c29;
+  --accent-strong: #d8b8ae;
+  --pill-indicator-start: #c09a8e;
+  --pill-indicator-end: #a07d71;
+  --bg-gradient-start: #1d1918;
+  --bg-gradient-end: #151211;
+  --chart-line: #c09a8e;
+  --chart-fill: rgba(192, 154, 142, 0.2);
+  --glow: rgba(192, 154, 142, 0.35);
+}
+
+/* =====================================================================
+ * Wellness Zone theme tokens (simulated cabin). Applied via
+ * [data-zone-theme] on the zone root. Independent of mood check-in.
+ * ===================================================================== */
+
+[data-zone-theme="night-time"] {
+  --zone-bg-1: #12141c;
+  --zone-bg-2: #07080c;
+  --zone-fg: #e8e6f0;
+  --zone-muted: #b0b4c4;
+  --zone-light: #8d97c8;
+  --zone-graphic-1: #c5cbe8;
+  --zone-graphic-2: #5c6798;
+  --zone-accent: #9aa3d0;
+  --zone-panel: rgba(18, 20, 28, 0.55);
+  --zone-panel-border: rgba(232, 230, 240, 0.12);
+}
+
+[data-zone-theme="campfire"] {
+  --zone-bg-1: #3a1a0e;
+  --zone-bg-2: #140904;
+  --zone-fg: #fff3e8;
+  --zone-muted: #e2c4ac;
+  --zone-light: #ff9a4a;
+  --zone-graphic-1: #ffc07a;
+  --zone-graphic-2: #c44a1c;
+  --zone-accent: #ffb066;
+  --zone-panel: rgba(20, 9, 4, 0.5);
+  --zone-panel-border: rgba(255, 243, 232, 0.12);
+}
+
+[data-zone-theme="babbling-brook"] {
+  --zone-bg-1: #16343c;
+  --zone-bg-2: #071418;
+  --zone-fg: #e7f4f6;
+  --zone-muted: #b3d0d6;
+  --zone-light: #7ec8d4;
+  --zone-graphic-1: #b7e4ea;
+  --zone-graphic-2: #2b7a88;
+  --zone-accent: #8ed0da;
+  --zone-panel: rgba(7, 20, 24, 0.5);
+  --zone-panel-border: rgba(231, 244, 246, 0.12);
+}
+
+[data-zone-theme="rainfall"] {
+  --zone-bg-1: #1a2228;
+  --zone-bg-2: #0b0e12;
+  --zone-fg: #e6eef2;
+  --zone-muted: #b4c2ca;
+  --zone-light: #9bb4c2;
+  --zone-graphic-1: #d0e0e8;
+  --zone-graphic-2: #4d6672;
+  --zone-accent: #adc0ca;
+  --zone-panel: rgba(11, 14, 18, 0.52);
+  --zone-panel-border: rgba(230, 238, 242, 0.12);
+}
+
+[data-zone-theme="birds-in-the-forest"] {
+  --zone-bg-1: #1c2a1c;
+  --zone-bg-2: #0a130a;
+  --zone-fg: #eef6ea;
+  --zone-muted: #c3d4b8;
+  --zone-light: #c6dd8f;
+  --zone-graphic-1: #dce9b8;
+  --zone-graphic-2: #4a7a3e;
+  --zone-accent: #b7d08a;
+  --zone-panel: rgba(10, 19, 10, 0.5);
+  --zone-panel-border: rgba(238, 246, 234, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-instant: 0ms;
+    --duration-fast: 0ms;
+    --duration-med: 0ms;
+    --duration-slow: 0ms;
+    --duration-theme: 0ms;
+    --duration-zone: 0ms;
+    --duration-breathe: 0ms;
+  }
+}
